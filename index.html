@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Image Size Reducer – Compress Images to 100KB, 200KB, 500KB or 1MB</title>
+    <meta
+      name="description"
+      content="Free online image size reducer. Compress JPG, PNG, and WebP images to 100 KB, 200 KB, 500 KB, 1 MB, or a custom size — directly in your browser. No upload, no sign-up."
+    />
+    <link rel="canonical" href="https://YOUR-DOMAIN.example/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Image Size Reducer – Compress Images to 100KB, 200KB, 500KB or 1MB" />
+    <meta
+      property="og:description"
+      content="Compress any JPG, PNG, or WebP image to a specific file size — directly in your browser. Your images never leave your device."
+    />
+    <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+    <meta property="og:image" content="https://YOUR-DOMAIN.example/og-image.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Image Size Reducer – Compress Images to 100KB, 200KB, 500KB or 1MB" />
+    <meta
+      name="twitter:description"
+      content="Compress any JPG, PNG, or WebP image to a specific file size — directly in your browser. Your images never leave your device."
+    />
+    <meta name="twitter:image" content="https://YOUR-DOMAIN.example/og-image.png" />
+
+    <!--
+      ============================================================
+      CLOUDFLARE WEB ANALYTICS
+      ============================================================
+      1. Sign up at https://cloudflare.com/web-analytics (free, cookie-free).
+      2. Add your site and copy the beacon token from the generated snippet.
+      3. Replace CLOUDFLARE_WEB_ANALYTICS_TOKEN below with your token.
+      This beacon only records anonymous page views. No image data or
+      personal information is ever sent. Custom tool events are handled
+      separately in src/lib/analytics.ts.
+    -->
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+      data-cf-beacon='{"token": "CLOUDFLARE_WEB_ANALYTICS_TOKEN"}'></script> -->
+
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are my images uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All image processing happens directly in your browser. Your images never leave your device, and we do not store them anywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What image formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can upload JPG, JPEG, PNG, and WebP images. Compressed output is produced in WebP, which offers strong compression and is supported by all modern browsers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress an image to exactly 100 KB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can target 100 KB, 200 KB, 500 KB, 1 MB, or a custom size. The tool adjusts quality and dimensions to get at or below your target. Some images cannot be reduced to very small sizes without major quality loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work on my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The tool is designed mobile-first and works in modern mobile browsers on Android and iPhone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. There is no cost, no account, and no limit on how many images you compress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my PNG converted to WebP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WebP produces much smaller files than PNG while preserving good quality and transparency, making it easier to reach a specific file size. The downloaded file has a .webp extension, accepted by most modern sites."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
