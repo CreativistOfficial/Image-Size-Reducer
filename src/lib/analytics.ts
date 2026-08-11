@@ -20,14 +20,22 @@ export type AnalyticsEvent =
 
 export function track(event: AnalyticsEvent): void {
   try {
-    // Cloudflare Web Analytics only records page views automatically via the
-    // beacon script. Custom events are not natively supported, so we expose
-    // them on window for optional forwarding to another provider.
-    const w = window as unknown as { __isa_events?: AnalyticsEvent[] };
+    const w = window as unknown as {
+      __isa_events?: AnalyticsEvent[];
+      gtag?: (...args: unknown[]) => void;
+    };
+
+    // Keep the local event log
     if (!w.__isa_events) w.__isa_events = [];
-    w.__isa_events!.push(event);
-    // Hook point: forward to your own collector here if desired.
+    w.__isa_events.push(event);
+
+    // Send event to Google Analytics
+    if (typeof w.gtag === 'function') {
+      const { type, ...params } = event;
+
+      w.gtag('event', type, params);
+    }
   } catch {
-    /* analytics must never break the app */
+    // Analytics must never break the app
   }
 }
