@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://image-size-reducer-62n.pages.dev/sitemap.xml
