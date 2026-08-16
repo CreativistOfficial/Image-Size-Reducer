@@ -6,6 +6,7 @@ import {
   Footer,
   HowItWorks,
   Privacy,
+  TargetSizes,
   UseCases,
 } from '@/components/Sections';
 
@@ -33,7 +34,7 @@ export default function App() {
       <section id="top" className="relative overflow-hidden">
         <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-12 text-center sm:pt-16">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-            Compress Any Image to Your Exact Size
+            Compress Images to a Specific Size
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base text-slate-600 sm:text-lg">
             Reduce JPG, PNG, and WebP images to 100 KB, 200 KB, 500 KB, 1 MB, or a custom
@@ -56,6 +57,7 @@ export default function App() {
       <HowItWorks />
       <Benefits />
       <UseCases />
+      <TargetSizes/>
       <Faq />
       <Privacy />
       <Footer />

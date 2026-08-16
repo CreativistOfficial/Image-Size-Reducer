@@ -119,6 +119,58 @@ export function UseCases() {
   );
 }
 
+export function TargetSizes() {
+  const sizes = [
+    {
+      title: 'Compress images to 100 KB',
+      body: 'Useful when an online application, form, or website requires an image to be under 100 KB.',
+    },
+    {
+      title: 'Compress images to 200 KB',
+      body: 'A practical option for profile photos, online applications, and websites with moderate file-size limits.',
+    },
+    {
+      title: 'Compress images to 500 KB',
+      body: 'A good balance between file size and image quality when a website allows images up to 500 KB.',
+    },
+    {
+      title: 'Compress images to 1 MB',
+      body: 'Reduce large images to approximately 1 MB while keeping more of the original image quality.',
+    },
+  ];
+
+  return (
+    <section className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <h2 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        Compress Images to a Specific Size
+      </h2>
+
+      <p className="mx-auto mt-3 max-w-2xl text-center text-slate-500">
+        Many websites, online forms, and applications have image file-size
+        limits. Choose a target size and reduce your image directly in your
+        browser.
+      </p>
+
+      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        {sizes.map((size) => (
+          <div
+            key={size.title}
+            className="rounded-2xl border border-slate-200 bg-white p-6"
+          >
+            <h3 className="text-lg font-semibold text-slate-800">
+              {size.title}
+            </h3>
+
+            <p className="mt-2 text-sm leading-relaxed text-slate-500">
+              {size.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function Faq() {
   const faqs = [
     {
@@ -127,7 +179,7 @@ export function Faq() {
     },
     {
       q: 'What image formats are supported?',
-      a: 'You can upload JPG, JPEG, PNG, and WebP images. Compressed output is produced in WebP, which offers strong compression and is supported by all modern browsers.',
+      a: 'You can upload JPG, JPEG, PNG, and WebP images. You can choose JPG, WebP, PNG, or Same as input as the output format.',
     },
     {
       q: 'Can I compress an image to exactly 100 KB?',
@@ -142,8 +194,8 @@ export function Faq() {
       a: 'Yes. There is no cost, no account, and no limit on how many images you compress.',
     },
     {
-      q: 'Why is my PNG converted to WebP?',
-      a: 'WebP produces much smaller files than PNG while preserving good quality and transparency. This makes it far easier to reach a specific file size. The downloaded file will have a .webp extension, which is accepted by most modern sites.',
+      q: 'Which output format should I choose?',
+      a: 'You can choose JPG, WebP, PNG, or Same as input. JPG is usually a good choice for photographs and can produce small files. WebP offers efficient compression while supporting transparency. PNG is lossless and is useful when preserving image details or transparency is important. Same as input keeps the original image format.',
     },
   ];
   return (
